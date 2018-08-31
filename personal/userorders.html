@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- <title>我的订单</title> -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0,  maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<script src="../js/jquery-1.6.2.min.js "></script>
+		<script type="text/javascript">
+
+		</script>
+</head>
+<body style="height:auot">
+		<div style="position:fixed;z-index:999; top:0;width:100%; height:40px;">
+		 <a href="Javascript:history.go(-1)" class="new-a-back"><span>返回</span></a> 
+			<div id="student" style="width:100%; height:100%;background: #eb4f38;font-size:25px;"class="clearfix">
+				 	<span onclick="s_wei()" id="wei" style="height:70%;width:25%;float:left;margin-left:22%; margin-top:2%;text-align:center;">未完成</span>
+				 	<span onclick="s_yi()" id="yi" style="height:70%;width:25%;float:left;margin-top: 2%;text-align:center;">已完成</span> 
+			</div>
+			<div  id="louzhang" style="width:100%; height:100%;background: #eb4f38;font-size:20px;"align="center">
+				<span onclick="l_wei()" id="l_wei" style="height:70%;width:25%;float:left;margin-left:12.5%; margin-top: 2%;text-align:center;">未配送 </span>
+				<span onclick="l_zhong()" id="l_zhong" style="height:70%;width:25%;float:left;margin-top: 2%;text-align:center;">配送中</span>
+				<span onclick="l_yi()" id="l_yi" style="height:70%;width:25%;float:left;margin-top: 2%;text-align:center;"> 已完成</span>
+			</div>
+		</div>
+		<div style="width:100%;height:100px;"></div>
+
+			<div id="userorder" style="width: 100%;height:auto;"class="clearfix">
+						<div style="width:100%;height:150px;float: left;"class="clearfix">
+							<span  style=" float: left;margin-left: 3%;width:95%;padding-top: 5px;">名字  手机号</span>
+							<span  style=" float: left;margin-left: 3%;width:95%;padding-top: 5px;">楼号&nbsp;:</span>
+							<span  style=" float: left;margin-left: 3%;width:95%;padding-top: 5px;"class="clearfix">订单总价&nbsp;:￥
+								<span style=" float: right;margin-right: 3%;font-size:25px;">></span>
+							</span>
+							<span  style=" float: left;margin-left: 3%;width:95%;padding-top: 5px;">备注&nbsp;:</span>
+							<span  style=" float: left;margin-left: 3%;width:95%;padding-top: 5px;"class="clearfix">日期
+								<span style=" float: right;margin-right:20%;">状态</span>
+							</span><br>
+						</div>
+					<div style="width:100%;border-top:1px solid #e5e5e5;float:left;margin-top:1%"></div>  
+			</div>
+
+</body>
+</html>

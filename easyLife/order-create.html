@@ -1,0 +1,155 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+	<title>结算</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0,  maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/easyLife/weui.min.css">
+		<link rel="stylesheet" href="../css/easyLife/style.css">
+</head>
+<body>
+<header class="header">
+	<div class="h-back" onclick="javascript:history.go(-1)"><span>返回</span></div>
+	<div class="h-title">订单结算</div>
+	<div class="h-right"></div>
+</header>
+
+ <div class="weui-cells">
+      <a class="weui-cell weui-cell_access" href="order-address.html">
+          <div class="weui-cell__bd j_address"><p>请选择收货地址</p></div>
+          <div class="weui-cell__ft"></div>
+      </a>
+</div>
+
+<div class="weui-cells order-goods-list">
+<div class="weui-cell goods-item1" data-id="1" data-cover="1" data-title="商品1" data-price="1" data-yb="1">
+      <div class="weui-cell__hd"><img src="../images/40.png" alt="" style="width:45px;height:45px;margin-right:15px;display:block"></div>
+      <div class="weui-cell__bd">
+      	<p>商品1</p>
+      	<p>1</p>
+      </div>
+      <div class="weui-cell__ft money">￥1</div>
+</div>
+</div>
+
+<div class="weui-cells">
+	<div class="weui-cell">
+         <div class="weui-cell__bd">
+             <p>费用明细</p>
+         </div>
+         <div class="weui-cell__ft"></div>
+     </div>
+    <div class="weui-cell">
+         <div class="weui-cell__bd">
+             <p>商品金额</p>
+         </div>
+         <div class="weui-cell__ft j_total_money money">￥0.00</div>
+     </div>
+    <div class="weui-cell">
+         <div class="weui-cell__bd">
+             <p>配送费</p>
+         </div>
+         <div class="weui-cell__ft money">￥0.00</div>
+     </div>
+    <div class="weui-cell">
+         <div class="weui-cell__bd">
+             <p>总价</p>
+         </div>
+         <div class="weui-cell__ft j_total_money money">￥0.00</div>
+     </div>
+</div>
+
+<div class="weui-cells">
+    <div class="weui-cell">
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="订单备注">
+        </div>
+    </div>
+</div>
+
+<div class="weui-cells">
+    <div class="weui-cell" style="background: #efeff4">
+        <div class="weui-cell__bd">
+           <!--<a href="order-result.html" class="weui-btn weui-btn_primary ">微信支付</a>-->
+            <a href="order-result.html" class="weui-btn weui-btn_primary ">微信支付</a>
+        </div>
+    </div>
+</div>
+
+<div class="js_dialog" id="alertDialog" style="display: none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__bd"></div>
+        <div class="weui-dialog__ft">
+            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary j_confirm">知道了</a>
+        </div>
+    </div>
+</div>
+
+<script id="item-template" type="text/html">
+
+</script>
+
+<script src="../js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var money = 0;
+	var addrId = "1";
+	var goodsArr = [];
+	
+	init();
+	function init() {
+		calc();
+	
+		// addr
+		var addrHtml = "";
+		addrHtml += "<p>姓名:张三</p>";
+		addrHtml += "<p>电话:12345678</p>";
+		addrHtml += "<p>地址:北京三里屯</p>";
+		$(".j_address").html(addrHtml);
+	}
+	
+	function calc() {
+		var totalMoney = 1, totalYb = 1, totalNum = 1;
+
+		$(".j_total_money").html("￥"+totalMoney);
+		$(".j_total_yb").html(totalYb);
+		$(".j_total_num").html(totalNum);
+		if (goodsArr.length == 0) {
+			$(".j_total_num").hide();
+			$(".j_settlement").addClass("weui-btn_disabled");
+		} else {
+			$(".j_total_num").show();
+			$(".j_settlement").removeClass("weui-btn_disabled");
+		}
+	}
+	$(".j_confirm").click(function(){
+		$("#alertDialog").hide();
+	});
+	// submit
+	$(".j_payment").click(function(){
+		if (addrId == '') {
+			$(".weui-dialog__bd").html("请选择收货人");
+			$("#alertDialog").show();
+		}
+		
+		var ogArr = new Array();
+		$.each(goodsArr, function(i, val){      
+			ogArr.push(val.id+","+val.count);
+		});
+		if (ogArr.length == 0) {
+			$("#alertDialog").show();
+		}
+		return;
+		
+	});
+});
+</script>
+</body>
+</html>

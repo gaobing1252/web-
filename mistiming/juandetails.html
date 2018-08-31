@@ -1,0 +1,144 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<!-- <title>劵详情</title> -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0,  maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" charset=utf-8 " />
+				<link rel="stylesheet " type="text/css " href="../css/mistiming/mistiming.css " charset=utf-8" />
+		<script type="text/javascript " src="../js/public.js "></script>
+		<script src="../js/jquery-1.6.2.min.js "></script>
+
+		<script type="text/javascript">
+			window.onload = function() {
+				$("#zhi_fs").hide();
+
+			}
+		</script>
+	</head>
+
+	<body id="body">
+		<a name="top"></a>
+		<form id="form1" action="" method="post">
+		</form>
+		<div id="zhi_fs" style="position:fixed;float:left;margin-left:5%;z-index:999; top:200px;width:90%; height:22%;background:#eb4f38;">
+
+			<span style="float:left; margin-left: 3%;margin-top: 1%;width: 90%">选择支付方式 
+				<a onclick="closes()"><img alt="" src="../images/close.png"style="display:inline-block;width:2em;height:2em;float: right;"></span></a>
+			<a onclick="weixin(1)">
+				<div style="width:100%;border-top:2px solid #ffffff;float:left;margin-top:2%;text-align:center;">
+					微信支付
+				</div>
+			</a>
+			<a onclick="zhifu(2)">
+				<div style="width:100%;border-top:2px solid #ffffff;float:left;margin-top:4%;text-align:center;">
+					支付宝支付
+				</div>
+			</a>
+		</div>
+
+		<!-- 轮播图 -->
+		<div id="tab">
+			<img src="../images/ssss.png" name="tabimg" class="tabimg">
+		</div>
+
+		<div style="width: 100%;">
+			<div style="width: 100%; height: 10%; font-size:13px;color:#666;">
+				<span style="width: 100%; float: left; padding-top: 10px;"> <img
+					alt="" src="../images/location.png"
+					style="display: inline-block; width: 1em; height: 1em; margin-left: 3%;">地址：
+				</span> <span style="width: 100%; float: left;"> <img alt=""
+					src="../images/phone.png"
+					style="display: inline-block; width: 1em; height: 1em; margin-left: 3%;">电话：
+				</span> <span style="width: 100%; float: left;"> <img alt=""
+					src="../images/Thread.png"
+					style="display: inline-block; width: 1em; height: 1em; margin-left: 3%;">推荐学长：
+					<img alt="" src=""
+					style="display: inline-block; width: 2em; height: 2em; float: right; margin-right: 4%"></span>
+			</div>
+
+			<div style="width: 100%; border-top: 1.5px solid #e5e5e5; float: left; font-size: 13px;">
+
+				<div style="width: 100%;  float: left;">
+					<span style=" float: left; margin-left: 3%; padding-top: 5px;font-weight:bold;">享用详情</span>
+				</div>
+				<div style="width: 100%; border-top: 1.5px solid #e5e5e5; float: left;"></div>
+
+				<div style="width: 97%; float: left;">
+
+					<div style="width: 50%; float: left;margin-left: 3%; padding-top: 5px;">
+						<span style="width: 100%;font-size:13px;color:#666;"></span>
+					</div>
+					<div style="width: 15%; float: left;margin-left: 5%; padding-top: 5px;">
+						<span style="font-size: 13px;">份</span>
+					</div>
+
+					<div style="width: 30%;height:auto; float: right;">
+						<br><span style=" float: right;font-size: 13px;">89元</span>
+						<br><span style=" float: right;font-size:13px;color:#666;">原价元100</span>
+						<br><span style=" float: right;font-size:13px;color:#666;">团购价89元</span>
+					</div>
+
+				</div>
+
+				<div style="width: 100%; border-top: 1.5px solid #e5e5e5; float: left;">
+					<div style="width:97%; float: left;">
+						<span style=" float: left; margin-left: 3%; padding-top: 5px;font-weight:bold;">消费须知</span>
+						<div style="width: 100%; border-top: 1.5px solid #e5e5e5; float: left;"></div>
+
+						<span style=" float: left;font-size:13px;color:#666;margin-left: 3%;width: 95%;padding-top: 5px;">
+							有效期</span><br><span style=" float: left;margin-left:3%;width: 95%;">*</span><br>
+						<span style=" float: left;font-size:13px;color:#666; margin-left: 3%;width: 95%;padding-top: 5px;">
+							除外日期</span><br><span style=" float: left;margin-left:3%;width: 95%;">*</span><br>
+						<span style=" float: left;font-size:13px;color:#666;margin-left: 3%;width: 95%;padding-top: 5px;">
+							使用时间</span><br><span style=" float: left;margin-left:3%;width: 95%;">*团购劵使用时间</span><br>
+						<span style=" float: left;font-size:13px;color:#666;margin-left: 3%;width: 95%;padding-top: 5px;">
+							预约提醒</span><br><span style=" float: left;margin-left:3%;width: 95%;">*</span><br>
+						<span style=" float: left;font-size:13px;color:#666;margin-left: 3%;width: 95%;padding-top: 5px;">
+							规则提醒</span><br><span style=" float: left;margin-left:3%;width: 95%;">*</span><br>
+						<span style=" float: left;font-size:13px;color:#666;margin-left: 3%;width: 95%;padding-top: 5px;">
+							包间</span><br><span style=" float: left;margin-left:3%;width: 95%;">*</span><br>
+						<span style=" float: left;font-size:13px;color:#666; margin-left: 3%;width: 95%;padding-top: 5px;">
+							堂食外带</span><br><span style=" float: left;margin-left:3%;width: 95%;">*</span><br>
+						<span style=" float: left;font-size:13px;color:#666;margin-left: 3%;width: 95%;padding-top: 5px;">
+							温馨提示</span><br><span style=" float: left;margin-left:3%;width: 95%;">*</span><br>
+					</div>
+				</div>
+
+				<div style="width: 97%; float: left;border-top: 1.5px solid #e5e5e5; ">
+					<span style=" float: left; margin-left: 3%; padding-top: 5px;font-weight:bold;">学长点评</span>
+					<div style="width: 100%; border-top: 1.5px solid #e5e5e5; float: left;"></div>
+					<span style="width: 100%; float: left; margin-left: 3%; padding-top: 10px;font-size:13px;color:#666;"></span>
+				</div>
+				<div style="width: 100%; border-top: 1.5px solid #e5e5e5; float: left;">
+					<div style="width:97%; float: left;">
+						<span style=" float: left; margin-left: 3%; padding-top: 5px;font-weight:bold;">商家特色</span>
+						<div style="width: 100%; border-top: 1.5px solid #e5e5e5; float: left;"></div>
+						<span style="width: 100%; float: left; margin-left: 3%; padding-top: 10px;font-size:13px;color:#666;"></span>
+					</div>
+					<div style="width:100%; height:25%;"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div style="position:fixed;z-index:9999;border-top:1.5px solid #e5e5e5;float:left; bottom: 0;width:100%; height:8%; background: #ffffff;">
+			<div style="float: left;width: 40%">
+				<span style="float: left;font-size: 20px; margin-left: 5%;font-weight:bold;color:#ff5500; padding-top: 10px;">￥89</span>
+			</div>
+			<a onclick="zhi(1,'${timeDifferenceId}','${item.price}')">
+				<div style="float:right;width: 25%;height:70%; margin-right: 5%;background: #ff5500; margin-top: 6px;text-align:center;">
+					<span style="font-size: 20px;color:#ffffff;">立刻购买</span>
+				</div>
+			</a>
+		</div>
+
+	</body>
+
+</html>

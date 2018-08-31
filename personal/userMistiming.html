@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- <title>我的时差劵</title> -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0,  maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" charset=utf-8 " />
+		<script type="text/javascript" src="../js/public.js"></script>
+		<script src="../js/jquery-1.6.2.min.js "></script>
+
+</head>
+<body style="height:auot">
+		<!--<div id="zhi_fs" style="position:fixed;float:left;margin-left:5%;z-index:999; top:200px;width:90%; height:22%;background:#eb4f38;">
+
+			<span style="float:left; margin-left: 3%;margin-top: 1%;width: 90%">选择支付方式 
+				<a onclick="closes()"><img alt="" src="<%=path%>/wx/static/images/close.png"style="display:inline-block;width:2em;height:2em;float: right;"></span></a>
+			<a onclick="weixin(1)">
+				<div style="width:100%;border-top:2px solid #ffffff;float:left;margin-top:2%;text-align:center;">
+				微信支付
+				</div>
+			</a>
+			<a onclick="zhifu(2)">
+				<div style="width:100%;border-top:2px solid #ffffff;float:left;margin-top:4%;text-align:center;">
+				支付宝支付
+				</div>
+			</a>
+		</div>-->
+		<div style="position:fixed;z-index:777; top:0;width:100%; height:40px;">
+		 <a href="Javascript:history.go(-1)" class="new-a-back"><span>返回</span></a> 
+			
+			<div  id="louzhang" style="width:100%; height:100%;background: #eb4f38;font-size:20px;"align="center">
+				<span onclick="wei(1,null)" id="wei" style="height:70%;width:25%;float:left;margin-left:12.5%; margin-top: 2%;text-align:center;">未使用</span>
+				<span onclick="yi(0,null)" id="yi" style="height:70%;width:25%;float:left;margin-top: 2%;text-align:center;">已使用</span>
+				<span onclick="wei_s(null,1)" id="wei_s" style="height:70%;width:25%;float:left;margin-top: 2%;text-align:center;">未支付</span>
+			</div>
+		</div>
+		<div style="width:100%;height:40px;"></div>
+			<input id="userChecked" type="hidden"/>
+			<input id="status" type="hidden"/>
+			<div id="usermistiming" style="width: 100%;height:auto;"class="clearfix">
+
+			</div>
+			
+</body>
+	
+</html>

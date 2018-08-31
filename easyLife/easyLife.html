@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0,  maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/easyLife/weui.min.css">
+		<link rel="stylesheet" href="../css/easyLife/style.css">
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="h-search">
+				<input type="search" class="h-search-input" placeholder="请输入商品名称">
+				<i class="ic-search"></i>
+			</div>
+			<div class="h-type j_type"><span class="j_type_txt"></span><b class="icon-arrow-b"></b></div>
+		</header>
+		<div class="settlement-area">
+			<div class="s-money">
+				<font class="money j_total_money">0.0元</font> 可得
+				<font class="j_total_yb">0</font>时关币</div>
+			<div class="s-btn">
+				<a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_disabled weui-btn_warn j_settlement">立刻结算</a>
+			</div>
+			<div class="s-cart j_cart"><i class="ic-cart"></i><span class="weui-badge j_total_num" style="display:none;position: absolute;top: 2px;left:24px;">0</span></div>
+		</div>
+		<div class="goods-area">
+			<div class="weui-cells goods-list">
+				<div class="weui-cell goods-item1" data-id="1" data-cover="1" data-title="商品1" data-price="1" data-yb="1">
+					<a href="easyLifedetails.html"><div class="weui-cell__hd"><img src="../images/40.png" alt="" style="width:80px;height:80px;margin-right:15px;display:block"></div></a>
+					<div class="weui-cell__bd">
+						<p class="g-info-title">商品1</p>
+						<p class="g-info-subtitle">商品</p>
+						<p class="money">￥1</p>
+						<p class="g-info-rebeat">可得时光币1</p>
+					</div>
+					<div class="g-info-number">
+						<div class="w-number">
+							<a class="w-number-btn w-number-btn-minus" data-pro="minus" href="javascript:void(0);" data-id="1">－</a>
+							<input class="w-number-input" value="0" type="number" data-id="1">
+							<a class="w-number-btn w-number-btn-plus" data-pro="plus" href="javascript:void(0);" data-id="1">＋</a>
+						</div>
+					</div>
+				</div>
+				<div class="weui-cell goods-item2" data-id="2" data-cover="2" data-title="商品2" data-price="2" data-yb="2">
+					<a href="easyLifedetails.html"><div class="weui-cell__hd"><img src="../images/40.png" alt="" style="width:80px;height:80px;margin-right:15px;display:block"></div></a>
+					<div class="weui-cell__bd">
+						<p class="g-info-title">商品2</p>
+						<p class="g-info-subtitle">商品</p>
+						<p class="money">￥2</p>
+						<p class="g-info-rebeat">可得时光币2</p>
+					</div>
+					<div class="g-info-number">
+						<div class="w-number">
+							<a class="w-number-btn w-number-btn-minus" data-pro="minus" href="javascript:void(0);" data-id="2">－</a>
+							<input class="w-number-input" value="0" type="number" data-id="2">
+							<a class="w-number-btn w-number-btn-plus" data-pro="plus" href="javascript:void(0);" data-id="2">＋</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="more">加载中...</p>
+		</div>
+		<div class="mask-layer"></div>
+		<!-- 分类菜单 -->
+		<div class="type-area">
+			<ul class="type-list">
+				<li class="type-item j-type-item ta-right" data-typeId="${tvo.typeId}">分类</li>
+				<li class="type-item j-type-item ta-right" data-typeId="${tvo.typeId}">分类</li>
+				<li class="type-item j-type-item ta-right" data-typeId="${tvo.typeId}">分类</li>
+				<li class="type-item j-type-item ta-right" data-typeId="${tvo.typeId}">分类</li>
+			</ul>
+		</div>
+		<!--底部导航栏 -->
+		<div class="nav" id="tabbar"></div>
+		
+		<script src="../js/jquery-1.6.2.min.js "></script>
+		<script type="text/javascript " src="../js/public.js "></script>
+		<script type="text/javascript " src="../js/easyLife/easyLife.js"></script>
+
+	</body>
+
+</html>

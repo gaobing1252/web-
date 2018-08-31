@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>选择收货地址</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0,  maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/easyLife/weui.min.css">
+		<link rel="stylesheet" href="../css/easyLife/style.css">
+</head>
+<body>
+<header class="header">
+	<div class="h-back" onclick="javascript:history.go(-1)"><span>返回</span></div>
+	<div class="h-title">选择收货地址</div>
+	<div class="h-right"></div>
+</header>
+
+<div class="weui-cells address-list">
+	<c:forEach var="item" items="${customer}" varStatus="sta">
+	<div class="weui-cell weui-cell_access addr-item" data-id="${item.id }" data-name="${item.receiver }" data-mobile="${item.phoneno}" data-addr="${item.userAddressInfo}">
+      <div class="weui-cell__hd" style="margin-right: 15px"><i class="icon-check weui-icon-circle"></i></div>
+      <div class="weui-cell__bd">
+      	<p class="">姓名:张三</p>
+		<p class="">电话:12345678</p>
+		<p class="">地址:北京三里屯</p>
+      </div>
+      <div class="weui-cell__ft"></div>  
+	</div>
+	</c:forEach>
+</div>
+
+<script src="../js/jquery-1.6.2.min.js "></script>
+<script type="text/javascript">
+</script>
+</body>
+</html>

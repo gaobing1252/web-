@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- <title>新增收货地址</title> -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0,  maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+
+</head>
+<body style="height:auot;background: #e5e5e5;">
+	<div id="form1" style="display:none;"></div>
+
+				<div class="top1">
+			<div class="top2">
+				 <a href="Javascript:history.go(-1)"><span class="top3">返回</span></a> 
+			</div>
+			<div class="top4">新增地址</div>
+		</div>
+		<div class="div_w"></div>
+	<form action="" id="AddressForm" method="post">
+		<div style="height:40px;width:100%;background: #ffffff;border-top: 1.5px solid #e5e5e5;"class="clearfix">
+			<span style="float:left; margin-left: 3%;margin-top:3%">收货人：</span>
+			<input id="receiver" name="receiver" style="width:60% ;height: 100%;border:none"placeholder="收货人姓名"/>
+		</div>
+		<div style="height:40px;width:100%;background: #ffffff;border-top: 1.5px solid #e5e5e5;"class="clearfix">
+			<span style="float:left; margin-left: 3%;margin-top:3%">手机号：</span>
+			<input id="phone" name="phone" style="width:60% ;height: 100%;border:none"placeholder="收货人手机号"/>
+		</div>
+		<div style="height:40px;width:100%;background: #ffffff;border-top: 1.5px solid #e5e5e5;"class="clearfix">
+			<span style="float:left; margin-left: 3%;margin-top:3%">楼号：</span>
+			<select id="bNo" name="bNo" style="width:80% ;height: 90%;border:none">
+		
+			</select>
+		</div>
+		<div style="height:80px;width:100%;background: #ffffff;border-top: 1.5px solid #e5e5e5;"class="clearfix">
+			<input id="addressInfo" name="addressInfo" style="width:95% ;height: 100%;margin-left: 3%;border:none "placeholder="详细地址"/>
+		</div>
+		<div style="height:40px;width:100%;"class="clearfix">
+			<input type="radio" value="1" name="isDefault" id="isDefault" style="float:left; margin-left: 3%;margin-top:3%">
+			<span style="float:left;margin-top:2%">设为默认地址</span>
+		</div>
+	</form>
+		<div style="height:40px;width:100%;background: #ffffff;border-top: 1.5px solid #e5e5e5;"class="clearfix">
+			<a onclick="addC(2)" id="addc">
+			<span style="color: red;font-size:25px;float:left;margin-left: 25%;margin-top: 3%">删除收货地址</span>
+			</a>
+		</div>
+		
+		<script src="../js/jquery-1.6.2.min.js "></script>
+		<script type="text/javascript">
+
+		</script>
+</body>
+</html>

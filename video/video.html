@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<!--兼职-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0,  maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/video/video.css"/>
+
+	</head>
+
+	<body id="body" style="height:auot">
+		<div id="form1" style="display:none;"></div>
+
+		<!-- 轮播图 -->
+
+		<div class="div0">
+			<a onclick="partTimeJob(1)">
+				<div class="div1">
+					<img alt="" src="../images/v1.png" ><br>兼职信息
+				</div>
+			</a>
+			<a onclick="videos(4)">
+				<div class="div1">
+					<img alt="" src="../images/v4.png" ><br>视频点播
+				</div>
+			</a>
+			<a onclick="partTimeJob(3)">
+			<div class="div1">
+				<img alt="" src="../images/v2.png" ><br>图文贴吧
+			</div>
+			</a>
+			<a onclick="partTimeJob(1)">
+			<div class="div1">
+				<img alt="" src="../images/v3.png" ><br>话题聊天
+			</div>
+			</a>
+		</div>
+
+		<!-- 内容 -->
+		<div class="div2">
+			<!-- 兼职 -->
+			<div id="partTimeJob" class="div2">
+				<div class="nva" style="width: 100%; height:7%; background: #ffffff;">
+					<ul>
+						<li>
+							<a href="#" onclick="getCondition(1)">全部分类</a>
+						</li>
+						<li>
+							<a href="#" onclick="getCondition(1)">全部岗位</a>
+						</li>
+						<li>
+							<a href="#" onclick="getCondition(3)">兼职类型</a>
+						</li>
+						<li>
+							<a href="#" onclick="getCondition(4)">结算方式</a>
+						</li>
+
+					</ul>
+				</div>
+				<!-- 二级菜单 -->
+				<div style="width: 100%;" id="school_type1" class="clearfix"></div>
+				<div style="width: 100%;" id="school_type2" class="clearfix"></div>
+				<div style="width: 100%;" id="school_type3" class="clearfix"></div>
+				<div style="width: 100%;" id="school_type4" class="clearfix"></div>
+				<div class="div_w" id="job"></div>
+			</div>
+
+			<!-- 视频 -->
+			<div id="videos" class="div2">
+				<div style="width:100%; height:40%" id="videoOn"></div>
+			</div>
+
+		</div>
+		
+				<!--底部导航栏 -->
+		<div class="nav" id="tabbar"></div>
+
+		<script src="../js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="../js/public.js"></script>
+		<script type="text/javascript" src="../js/video/video.js"></script>
+
+
+	</body>
+
+</html>

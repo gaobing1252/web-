@@ -1,0 +1,145 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>购物车</title>
+	<meta name="keywords" content=" "/>
+	<meta name="description" content=" ">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+	<link rel="stylesheet" href="../css/easyLife/weui.min.css">
+	<link rel="stylesheet" href="../css/easyLife/style.css">
+</head>
+<body>
+<header class="header">
+	<div class="h-back" onclick="javascript:history.go(-1)"><span>返回</span></div>
+	<div class="h-title">购物车</div>
+	<div class="h-right"></div>
+</header>
+
+<div class="weui-cells cart-goods-list">
+	
+	<div class="weui-cell goods-item1" data-id="1" data-cover="1" data-title="商品1" data-price="1" data-yb="1">
+      <div class="weui-cell__hd" style="margin-right: 15px"><i class="weui-icon-success"></i></div>
+      <div class="weui-cell__hd"><img src="../images/40.png" alt="" style="width:45px;height:45px;margin-right:15px;display:block"></div>
+      <div class="weui-cell__bd">
+      	<p class="">商品1</p>
+		<p class="money">￥1</p>
+      </div>
+      <div class="g-info-number">
+		<div class="w-number">
+                <a class="w-number-btn w-number-btn-minus" data-pro="minus" href="javascript:void(0);" data-id="1">－</a>
+                <input class="w-number-input" value="1" type="number" data-id="1">
+                <a class="w-number-btn w-number-btn-plus" data-pro="plus" href="javascript:void(0);" data-id="1">＋</a>
+           </div>
+	</div>
+</div>
+</div>
+<p class="empty">购物车无商品，<a href="${ctx}/wxController/easyLife.do">马上去逛逛~</a></p>
+
+<div class="action-area box">
+	<div class="a-select"><i class="weui-icon-success"></i>全选</div>
+	<div class="a-desc box-flex">
+		<p class="a-desc-total">总计<font class="j_total_num">0</font>件 <font class="money j_total_money">0.00元</font></p>
+		<p>可得<font class="j_total_yb">0</font>积分</p>
+	</div>
+	<div class="a-action"><a href="javascript:;" class="weui-btn weui-btn_warn j_settlement">立刻结算</a></div>
+</div>
+<script src="../js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var goodsArr = [];
+	init();
+	function init() {
+		var productsStr = localStorage.getItem("cart");//获取商品缓存
+		calc();
+	}
+	
+	// 结算
+	$(".j_settlement").click(function(){
+		if ($(this).hasClass("weui-btn_disabled")) {
+			// alert("请先选择商品");			
+		} else {
+			window.location.href = "../easyLife/order-create.html";
+		}
+	});
+	
+	// 商品数量加减
+	$(".cart-goods-list").delegate(".w-number-btn", "click", function() {
+		var pro = $(this).attr("data-pro");
+		var $item = $(this).parent().find("input");
+		var count = parseInt($item.val());
+		// 最小值
+		if (pro == 'minus' && count == 0) {
+			return;
+		}
+		
+		var temp = pro == 'plus' ? count + 1 : count -1;
+		$item.val(temp < 0 ? 0 : temp);
+		updateCart($(this).attr("data-id"), temp);
+	});
+	$(".cart-goods-list").delegate(".w-number-input", "blur", function() {
+		var count = parseInt($(this).val());
+		if (isNaN(count) || count < 0) {
+			count = 0;
+			$(this).val(0);
+		}
+		updateCart($(this).attr("data-id"), count);
+	});
+
+	function updateCart(id, count) {
+		var $goodsObj = $(".goods-item"+id);
+		var goods = {};
+		goods.id = $goodsObj.attr("data-id");
+		goods.title = $goodsObj.attr("data-title");
+		goods.price = $goodsObj.attr("data-price");
+		goods.cover = $goodsObj.attr("data-cover");
+		goods.yb = $goodsObj.attr("data-yb");
+		goods.count = count;
+		
+		var index = -1;
+		$.each(goodsArr, function(i, val) {
+			if (goods.id == val.id) {
+				index = i;
+			}
+		});
+		
+		// 从列表中删除当前记录
+		if (count == 0) {
+			$(".goods-item"+id).remove();
+			goodsArr.splice(index, 1);
+		} else {
+			if (index == -1) {
+				goodsArr.push(goods);
+			} else {
+				goodsArr.splice(index, 1, goods);
+			}
+		}
+		
+		calc();
+		
+	}
+	
+	function calc() {
+		var totalMoney = 1, totalYb = 1, totalNum = 1;
+		$(".j_total_money").html("￥"+totalMoney);
+		$(".j_total_yb").html(totalYb);
+		$(".j_total_num").html(totalNum);
+		if (goodsArr.length == 0) {
+			$(".empty").show();
+			$(".j_total_num").hide();
+			$(".j_settlement").addClass("weui-btn_disabled");
+		} else {
+			$(".empty").hide();
+			$(".j_total_num").show();
+			$(".j_settlement").removeClass("weui-btn_disabled");
+		}
+	}
+});
+</script>
+</body>
+</html>

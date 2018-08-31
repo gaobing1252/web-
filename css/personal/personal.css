@@ -1,0 +1,53 @@
+
+.p1{
+	height: 8%; width: 100%; float: left; border-top: 1.5px solid #e5e5e5;
+}
+
+.p11{
+	height: 8%; width: 100%; float: left;border-top: 20px solid #e5e5e5;	
+}
+
+.p2{
+	width: 10%; float: left; margin-left: 3%;padding-top: 5px;
+}
+
+.p3{
+	display: inline-block; width: 1.5em; height: 1.5em;
+}
+
+.p4{
+	width: 85%; float: right; padding-top: 6px;
+}
+
+.p5{
+	float: right; margin-right: 3%;
+}
+
+.p55{
+	width: 100%; border-top: 1.5px solid #e5e5e5; float: left;  color: #666;
+}
+
+.p6{
+	float: left;"
+}
+
+.log{
+	width: 100%; height: 15%;
+}
+
+.log1{
+	width: 10%;height:100%; float: left; margin-left: 3%;
+}
+
+.logimg{
+	display: inline-block; width: 2.2em; height: 2.2em;
+}
+
+.log2{
+	width: 85%;height:100%; float: right;padding-top:5px;font-weight:bold;
+}
+
+.log3{
+	float: left;margin-left: 5%;
+}
+
